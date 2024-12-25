@@ -34,3 +34,9 @@ p {
   line-height: 24px;
   font-family: "Open Sans";
 }
+
+label {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Open Sans";
+}

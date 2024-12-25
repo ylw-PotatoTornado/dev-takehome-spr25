@@ -11,7 +11,7 @@ export default {
       colors: {
         primary: {
           DEFAULT: "#fc5b43",
-          stroke: "#fd76c7",
+          stroke: "#fd7c69",
           "stroke-weak": "#fdded9",
           fill: "#fcf8f6",
         },
@@ -29,6 +29,7 @@ export default {
         md: ["32px", { lineHeight: "40px" }],
         sm: ["24px", { lineHeight: "32px" }],
         xs: ["18px", { lineHeight: "24px" }],
+        xxs: ["12px", { lineHeight: "18px" }],
       },
     },
   },

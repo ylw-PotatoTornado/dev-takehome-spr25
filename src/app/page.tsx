@@ -1,4 +1,7 @@
+import Button from "@/components/atoms/Button";
+import { APP_PATHS } from "@/utils/constants/paths";
 import { NP } from "@/utils/constants/strings";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,13 +11,13 @@ export default function Home() {
           <h1>{NP.NAME}</h1>
           <p>{NP.TAGLINE}</p>
         </div>
-        <div className="flex flex-row gap-5">
-          <button className="bg-primary-fill text-primary py-2 px-4 rounded-md hover:bg-primary hover:text-white border-white border">
-            Log In
-          </button>
-          <button className="bg-primary-fill text-primary py-2 px-4 rounded-md hover:bg-primary hover:text-white border-white border">
-            Sign Up
-          </button>
+        <div className="flex flex-col w-full gap-5">
+          <Link href={APP_PATHS.LOGIN}>
+            <Button variant="inverted">Log In</Button>
+          </Link>
+          <Link href={APP_PATHS.SIGNUP}>
+            <Button variant="inverted">Sign Up</Button>
+          </Link>
         </div>
       </div>
     </div>
