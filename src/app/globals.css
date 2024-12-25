@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-family: "Roboto";
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 48px;
+  font-family: "Roboto";
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-family: "Roboto";
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Roboto";
+}
+
+p {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Open Sans";
+}
