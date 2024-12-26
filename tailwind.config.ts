@@ -15,8 +15,9 @@ export default {
           "stroke-weak": "#fdded9",
           fill: "#fcf8f6",
         },
-        error: {
+        negative: {
           DEFAULT: "#c63939",
+          fill: "#d26261",
         },
       },
       fontFamily: {

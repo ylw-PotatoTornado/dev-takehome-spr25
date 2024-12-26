@@ -7,6 +7,7 @@ interface InputProps {
   type?: "text" | "password" | "email" | "number" | "tel" | "url" | "search";
   placeholder?: string;
   value?: string;
+  label?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
@@ -17,6 +18,7 @@ export default function Input({
   type = "text",
   placeholder,
   value,
+  label,
   onChange,
   onBlur,
   onFocus,
@@ -28,14 +30,17 @@ export default function Input({
   };
 
   return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      onBlur={onBlur}
-      onFocus={onFocus}
-      className={`${baseStyles} ${variantStyles[variant]}`}
-    />
+    <div>
+      {label && <label className="block">{label}</label>}
+      <input
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+        onFocus={onFocus}
+        className={`${baseStyles} ${variantStyles[variant]}`}
+      />
+    </div>
   );
 }

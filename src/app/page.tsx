@@ -12,11 +12,15 @@ export default function Home() {
           <p>{NP.TAGLINE}</p>
         </div>
         <div className="flex flex-col w-full gap-5">
-          <Link href={APP_PATHS.LOGIN}>
-            <Button variant="inverted">Log In</Button>
+          <Link href={APP_PATHS.CREATE_REQ}>
+            <Button variant="inverted">
+              <p>Request an Item</p>
+            </Button>
           </Link>
-          <Link href={APP_PATHS.SIGNUP}>
-            <Button variant="inverted">Sign Up</Button>
+          <Link href={APP_PATHS.ADMIN_PORTAL}>
+            <Button variant="inverted">
+              <p>Admin Portal</p>
+            </Button>
           </Link>
         </div>
       </div>

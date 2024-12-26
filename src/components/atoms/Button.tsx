@@ -15,7 +15,7 @@ export default function Button({
   onClick,
   children,
 }: ButtonProps) {
-  const baseStyles = "py-2 px-4 rounded-md transition w-full";
+  const baseStyles = "py-2 px-4 rounded-md transition w-full ";
 
   const variantStyles: Record<ButtonVariant, string> = {
     primary:
