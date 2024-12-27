@@ -1,6 +1,6 @@
 import Button from "@/components/atoms/Button";
-import { APP_PATHS } from "@/utils/constants/paths";
-import { NP } from "@/utils/constants/strings";
+import { APP_PATHS } from "@/lib/constants/paths";
+import { NP } from "@/lib/constants/strings";
 import Link from "next/link";
 
 export default function Home() {

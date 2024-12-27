@@ -1,4 +1,4 @@
-import { MockItemRequest, MockRequestStatus } from "@/utils/types/mock";
+import { MockItemRequest, MockRequestStatus } from "@/lib/types/mock/request";
 
 let mockItemRequests: MockItemRequest[] = [
   {

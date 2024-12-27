@@ -13,3 +13,8 @@ export interface MockItemRequest {
   lastEditedDate: Date | null;
   status: MockRequestStatus;
 }
+
+export interface MockCreateItemRequest {
+  requestorName: string;
+  itemRequested: string;
+}
