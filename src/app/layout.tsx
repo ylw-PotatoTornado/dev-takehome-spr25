@@ -1,8 +1,9 @@
+import { NP } from "@/lib/constants/strings";
 import "./globals.css";
 
 export const metadata = {
-  title: "Crisis Corner",
-  description: "Your direction in times of crisis.",
+  title: NP.NAME,
+  description: NP.TAGLINE,
 };
 
 export default function RootLayout({
