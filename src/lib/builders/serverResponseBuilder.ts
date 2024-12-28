@@ -1,4 +1,4 @@
-import { RESPONSES, ResponseType } from "@/lib/types/response";
+import { RESPONSES, ResponseType } from "@/lib/types/apiResponse";
 
 export class ServerResponseBuilder {
   private message: string;

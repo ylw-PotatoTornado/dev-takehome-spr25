@@ -1,4 +1,4 @@
-import { ResponseType } from "@/lib/types/response";
+import { ResponseType } from "@/lib/types/apiResponse";
 import {
   createNewMockRequest,
   editMockStatusRequest,

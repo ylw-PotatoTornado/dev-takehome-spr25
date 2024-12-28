@@ -1,4 +1,4 @@
-import { HTTP_STATUS_CODE } from "../types/response";
+import { HTTP_STATUS_CODE } from "../types/apiResponse";
 
 export abstract class InputException extends Error {
   code: HTTP_STATUS_CODE;

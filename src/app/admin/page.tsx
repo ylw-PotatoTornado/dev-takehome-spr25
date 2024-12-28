@@ -38,7 +38,7 @@ export default function ItemRequestsPage() {
             ))}
           </ul>
         ) : (
-          "N/A :("
+          "None :("
         )}
       </div>
     </div>

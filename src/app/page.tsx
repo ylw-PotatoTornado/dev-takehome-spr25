@@ -17,7 +17,6 @@ export default function Home() {
               <h3>Admin Portal</h3>
             </Button>
           </Link>
-          {/* Insert a link to a unique thing about you!!! */}
           <Link href={APP_PATHS.COOL}>
             <Button variant="inverted">
               <h3>Something cool!</h3>

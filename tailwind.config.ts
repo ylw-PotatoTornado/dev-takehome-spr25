@@ -20,7 +20,7 @@ export default {
           },
           stroke: "#eaecf0",
           text: {
-            DEFAULT: "#667085",
+            DEFAULT: "#667084",
             dark: "#6a6a6a",
           },
         },
@@ -47,15 +47,6 @@ export default {
       },
       fontFamily: {
         DEFAULT: ["Inter", "sans-serif"],
-      },
-      fontSize: {
-        xxl: ["48px", { lineHeight: "56px" }],
-        xl: ["18px", { lineHeight: "28px" }],
-        lg: ["16px", { lineHeight: "18px" }],
-        md: ["14px", { lineHeight: "20px" }],
-        sm: "14px",
-        xs: ["12px", { lineHeight: "18px" }],
-        label: ["16px", { lineHeight: "24px" }],
       },
     },
   },
