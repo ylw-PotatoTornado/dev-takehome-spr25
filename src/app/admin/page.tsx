@@ -31,11 +31,15 @@ export default function ItemRequestsPage() {
       </div>
       <div className="flex flex-col gap-3">
         <h3 className="underline">Currently approved items:</h3>
-        <ul className="list-disc pl-5">
-          {itemList.map((listItem, index) => (
-            <li key={index}>{listItem}</li>
-          ))}
-        </ul>
+        {itemList.length > 0 ? (
+          <ul className="list-disc pl-5">
+            {itemList.map((listItem, index) => (
+              <li key={index}>{listItem}</li>
+            ))}
+          </ul>
+        ) : (
+          "N/A :("
+        )}
       </div>
     </div>
   );
