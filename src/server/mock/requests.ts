@@ -1,15 +1,8 @@
 import mockItemRequests from "@/app/api/mock/data";
-import { InvalidInputError } from "@/lib/errors/userExceptions";
+import { InvalidInputError } from "@/lib/errors/inputExceptions";
 import { MockItemRequest, MockRequestStatus } from "@/lib/types/mock/request";
-import {
-  generateMockId,
-  sortMockItemRequests,
-} from "@/lib/utils/mock/requests";
+import { generateMockId } from "@/lib/utils/mock/requests";
 import { validateMockCreateItemRequest } from "@/lib/validation/mock/requests";
-
-export function getMockRequests(): MockItemRequest[] {
-  return sortMockItemRequests(mockItemRequests);
-}
 
 export function createNewMockRequest(request: any): MockItemRequest {
   const validatedRequest = validateMockCreateItemRequest(request);

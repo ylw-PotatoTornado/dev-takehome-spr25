@@ -1,6 +1,9 @@
-import { MockCreateItemRequest } from "@/lib/types/mock/request";
+import {
+  MockCreateItemRequest,
+  MockRequestStatus,
+} from "@/lib/types/mock/request";
 
-function validateMockString(str: any, lower?: number, upper?: number): boolean {
+function isValidMockString(str: any, lower?: number, upper?: number): boolean {
   if (typeof str !== "string" || str.trim() == "") {
     return false;
   }
@@ -10,12 +13,23 @@ function validateMockString(str: any, lower?: number, upper?: number): boolean {
   return true;
 }
 
-function validateMockName(name: string): boolean {
-  return validateMockString(name, 3, 30);
+function isValidMockName(name: string): boolean {
+  return isValidMockString(name, 3, 30);
 }
 
-function validateMockItemRequested(item: string): boolean {
-  return validateMockString(item, 2, 100);
+function isValidMockItemRequested(item: string): boolean {
+  return isValidMockString(item, 2, 100);
+}
+
+export function isValidMockStatus(status: any): boolean {
+  return (
+    isValidMockString(status) &&
+    Object.values(MockRequestStatus).includes(status as MockRequestStatus)
+  );
+}
+
+export function isValidMockId(id: any): boolean {
+  return typeof id === "number" && id > 0;
 }
 
 export function validateMockCreateItemRequest(
@@ -25,8 +39,8 @@ export function validateMockCreateItemRequest(
     return null;
   }
   if (
-    !validateMockName(request.requestorName) ||
-    !validateMockItemRequested(request.itemRequested)
+    !isValidMockName(request.requestorName) ||
+    !isValidMockItemRequested(request.itemRequested)
   ) {
     return null;
   }
