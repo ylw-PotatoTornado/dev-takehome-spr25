@@ -1,4 +1,5 @@
-import { MockItemRequest, MockRequestStatus } from "@/lib/types/mock/request";
+import { MockItemRequest } from "@/lib/types/mock/request";
+import { RequestStatus } from "@/lib/types/request";
 
 let mockItemRequests: MockItemRequest[] = [
   {
@@ -7,7 +8,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "First Aid Kit",
     requestCreatedDate: new Date("2024-12-20"),
     lastEditedDate: new Date("2024-12-23"),
-    status: MockRequestStatus.APPROVED,
+    status: RequestStatus.APPROVED,
   },
   {
     id: 2,
@@ -15,7 +16,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Bottled Water",
     requestCreatedDate: new Date("2024-12-18"),
     lastEditedDate: new Date("2024-12-18"),
-    status: MockRequestStatus.PENDING,
+    status: RequestStatus.PENDING,
   },
   {
     id: 3,
@@ -23,7 +24,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Non-perishable Food",
     requestCreatedDate: new Date("2024-12-15"),
     lastEditedDate: new Date("2024-12-19"),
-    status: MockRequestStatus.COMPLETED,
+    status: RequestStatus.COMPLETED,
   },
   {
     id: 4,
@@ -31,7 +32,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Flashlight",
     requestCreatedDate: new Date("2024-12-21"),
     lastEditedDate: new Date("2024-12-22"),
-    status: MockRequestStatus.REJECTED,
+    status: RequestStatus.REJECTED,
   },
   {
     id: 5,
@@ -39,7 +40,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Blankets",
     requestCreatedDate: new Date("2024-12-16"),
     lastEditedDate: new Date("2024-12-17"),
-    status: MockRequestStatus.APPROVED,
+    status: RequestStatus.APPROVED,
   },
   {
     id: 6,
@@ -47,7 +48,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Portable Radio",
     requestCreatedDate: new Date("2024-12-17"),
     lastEditedDate: new Date("2024-12-17"),
-    status: MockRequestStatus.PENDING,
+    status: RequestStatus.PENDING,
   },
   {
     id: 7,
@@ -55,7 +56,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Backup Batteries",
     requestCreatedDate: new Date("2024-12-14"),
     lastEditedDate: new Date("2024-12-15"),
-    status: MockRequestStatus.COMPLETED,
+    status: RequestStatus.COMPLETED,
   },
   {
     id: 8,
@@ -63,7 +64,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Hygiene Kits",
     requestCreatedDate: new Date("2024-12-19"),
     lastEditedDate: new Date("2024-12-20"),
-    status: MockRequestStatus.APPROVED,
+    status: RequestStatus.APPROVED,
   },
   {
     id: 9,
@@ -71,7 +72,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Prescription Medications",
     requestCreatedDate: new Date("2024-12-20"),
     lastEditedDate: null,
-    status: MockRequestStatus.PENDING,
+    status: RequestStatus.PENDING,
   },
   {
     id: 10,
@@ -79,7 +80,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Can Opener",
     requestCreatedDate: new Date("2024-12-13"),
     lastEditedDate: new Date("2024-12-14"),
-    status: MockRequestStatus.REJECTED,
+    status: RequestStatus.REJECTED,
   },
   {
     id: 11,
@@ -87,7 +88,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Solar Phone Charger",
     requestCreatedDate: new Date("2024-12-21"),
     lastEditedDate: new Date("2024-12-22"),
-    status: MockRequestStatus.COMPLETED,
+    status: RequestStatus.COMPLETED,
   },
   {
     id: 12,
@@ -95,7 +96,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Water Purification Tablets",
     requestCreatedDate: new Date("2024-12-18"),
     lastEditedDate: new Date("2024-12-20"),
-    status: MockRequestStatus.APPROVED,
+    status: RequestStatus.APPROVED,
   },
   {
     id: 13,
@@ -103,7 +104,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Emergency Shelter",
     requestCreatedDate: new Date("2024-12-19"),
     lastEditedDate: new Date("2024-12-19"),
-    status: MockRequestStatus.PENDING,
+    status: RequestStatus.PENDING,
   },
   {
     id: 14,
@@ -111,7 +112,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Fire Extinguisher",
     requestCreatedDate: new Date("2024-12-16"),
     lastEditedDate: new Date("2024-12-17"),
-    status: MockRequestStatus.REJECTED,
+    status: RequestStatus.REJECTED,
   },
   {
     id: 15,
@@ -119,7 +120,7 @@ let mockItemRequests: MockItemRequest[] = [
     itemRequested: "Duct Tape",
     requestCreatedDate: new Date("2024-12-15"),
     lastEditedDate: new Date("2024-12-16"),
-    status: MockRequestStatus.PENDING,
+    status: RequestStatus.PENDING,
   },
 ];
 

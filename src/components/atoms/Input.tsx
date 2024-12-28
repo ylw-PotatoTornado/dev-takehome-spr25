@@ -26,7 +26,7 @@ export default function Input({
   const baseStyles = "py-2 px-4 rounded-md transition w-full";
 
   const variantStyles: Record<InputVariant, string> = {
-    primary: "bg-primary-fill text-xs focus:outline-primary-stroke",
+    primary: "bg-primary-fill outline-gray-stroke text-gray-text",
   };
 
   return (

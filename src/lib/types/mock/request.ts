@@ -1,9 +1,4 @@
-export enum MockRequestStatus {
-  PENDING = "pending",
-  APPROVED = "approved",
-  COMPLETED = "completed",
-  REJECTED = "rejected",
-}
+import { RequestStatus } from "../request";
 
 export interface MockItemRequest {
   id: number;
@@ -11,7 +6,7 @@ export interface MockItemRequest {
   itemRequested: string;
   requestCreatedDate: Date;
   lastEditedDate: Date | null;
-  status: MockRequestStatus;
+  status: RequestStatus;
 }
 
 export interface MockCreateItemRequest {

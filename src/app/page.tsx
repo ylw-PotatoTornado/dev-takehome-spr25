@@ -8,18 +8,18 @@ export default function Home() {
     <div className="min-h-screen flex flex-col justify-center items-center bg-primary text-white">
       <div className="flex flex-col gap-10 justify-center items-center">
         <div className="flex flex-col justify-center items-center">
-          <h1>{NP.NAME}</h1>
-          <p>{NP.TAGLINE}</p>
+          <h1 className="font-bold">{NP.NAME}</h1>
+          <h2>{NP.TAGLINE}</h2>
         </div>
         <div className="flex flex-col w-full gap-5">
-          <Link href={APP_PATHS.CREATE_REQ}>
-            <Button variant="inverted">
-              <p>Request an Item</p>
-            </Button>
-          </Link>
           <Link href={APP_PATHS.ADMIN_PORTAL}>
             <Button variant="inverted">
-              <p>Admin Portal</p>
+              <h3>Admin Portal</h3>
+            </Button>
+          </Link>
+          <Link href="https://bitsofgood.org/">
+            <Button variant="inverted">
+              <h3>Something cool!</h3>
             </Button>
           </Link>
         </div>

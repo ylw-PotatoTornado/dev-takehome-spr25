@@ -1,7 +1,5 @@
-import {
-  MockCreateItemRequest,
-  MockRequestStatus,
-} from "@/lib/types/mock/request";
+import { MockCreateItemRequest } from "@/lib/types/mock/request";
+import { RequestStatus } from "@/lib/types/request";
 
 function isValidMockString(str: any, lower?: number, upper?: number): boolean {
   if (typeof str !== "string" || str.trim() == "") {
@@ -24,7 +22,7 @@ function isValidMockItemRequested(item: string): boolean {
 export function isValidMockStatus(status: any): boolean {
   return (
     isValidMockString(status) &&
-    Object.values(MockRequestStatus).includes(status as MockRequestStatus)
+    Object.values(RequestStatus).includes(status as RequestStatus)
   );
 }
 

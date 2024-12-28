@@ -10,27 +10,52 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#fc5b43",
-          stroke: "#fd7c69",
-          "stroke-weak": "#fdded9",
-          fill: "#fcf8f6",
+          DEFAULT: "#0070ff",
+          fill: "#eff6ff",
+        },
+        gray: {
+          fill: {
+            DEFAULT: "#f2f2f2",
+            light: "#fcfcfd",
+          },
+          stroke: "#eaecf0",
+          text: {
+            DEFAULT: "#667085",
+            dark: "#6a6a6a",
+          },
+        },
+        success: {
+          fill: "#ecfdf3",
+          indicator: "#14ba6d",
+          text: "#037847",
+        },
+        danger: {
+          fill: "#ffd2d2",
+          indicator: "#d40400",
+          text: "#8d0402",
+        },
+        warning: {
+          fill: "#ffebc8",
+          indicator: "#ffbe4c",
+          text: "#7b5f2e",
         },
         negative: {
-          DEFAULT: "#c63939",
-          fill: "#d26261",
+          fill: "#ffdac3",
+          indicator: "#fd8033",
+          text: "#a43e00",
         },
       },
       fontFamily: {
-        body: ["Open Sans", "sans-serif"],
-        heading: ["Roboto", "sans-serif"],
+        DEFAULT: ["Inter", "sans-serif"],
       },
       fontSize: {
-        xl: ["48px", { lineHeight: "56px" }],
-        lg: ["40px", { lineHeight: "48px" }],
-        md: ["32px", { lineHeight: "40px" }],
-        sm: ["24px", { lineHeight: "32px" }],
-        xs: ["18px", { lineHeight: "24px" }],
-        xxs: ["12px", { lineHeight: "18px" }],
+        xxl: ["48px", { lineHeight: "56px" }],
+        xl: ["18px", { lineHeight: "28px" }],
+        lg: ["16px", { lineHeight: "18px" }],
+        md: ["14px", { lineHeight: "20px" }],
+        sm: "14px",
+        xs: ["12px", { lineHeight: "18px" }],
+        label: ["16px", { lineHeight: "24px" }],
       },
     },
   },
