@@ -13,3 +13,8 @@ export interface MockCreateItemRequest {
   requestorName: string;
   itemRequested: string;
 }
+
+export interface MockEditStatusRequest {
+  id: number;
+  status: RequestStatus;
+}

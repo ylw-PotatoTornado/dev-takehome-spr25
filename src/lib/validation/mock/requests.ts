@@ -1,4 +1,9 @@
-import { MockCreateItemRequest } from "@/lib/types/mock/request";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// ^ disable rules because we are validating anys to make sure it conforms else erroring
+import {
+  MockCreateItemRequest,
+  MockEditStatusRequest,
+} from "@/lib/types/mock/request";
 import { RequestStatus } from "@/lib/types/request";
 
 function isValidMockString(str: any, lower?: number, upper?: number): boolean {
@@ -47,4 +52,20 @@ export function validateMockCreateItemRequest(
     itemRequested: request.itemRequested,
   };
   return newCreateItemRequest;
+}
+
+export function validateMockEditStatusRequest(
+  request: any
+): MockEditStatusRequest | null {
+  if (!request.id || !request.status) {
+    return null;
+  }
+  if (!isValidMockId(request.id) || !isValidMockStatus(request.status)) {
+    return null;
+  }
+  const newEditStatusRequest: MockEditStatusRequest = {
+    id: request.id,
+    status: request.status,
+  };
+  return newEditStatusRequest;
 }

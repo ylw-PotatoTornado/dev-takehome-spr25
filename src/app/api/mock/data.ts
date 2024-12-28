@@ -1,3 +1,6 @@
+/* eslint-disable prefer-const */
+//^ disable because eslint doesn't realize we edit elsewhere :(
+
 import { MockItemRequest } from "@/lib/types/mock/request";
 import { RequestStatus } from "@/lib/types/request";
 
