@@ -12,6 +12,8 @@ All the front-end will be built off [this Figma file](https://www.figma.com/desi
 
 We have specified some tasks as making components but that does not mean these are the only components you should be making.
 
+The API endpoints are not guaranteed to produce successful responses so make sure you handle errors! The application should NEVER crash.
+
 ## Minimum Requirements
 
 ### Components
