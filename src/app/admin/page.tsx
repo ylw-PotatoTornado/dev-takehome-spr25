@@ -4,6 +4,9 @@ import Button from "@/components/atoms/Button";
 import Input from "@/components/atoms/Input";
 import { useState } from "react";
 
+/**
+ * Legacy front-end code from Crisis Corner's previous admin page!
+ */
 export default function ItemRequestsPage() {
   const [item, setItem] = useState<string>("");
   const [itemList, setItemList] = useState<string[]>([]);

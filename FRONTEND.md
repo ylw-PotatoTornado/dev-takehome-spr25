@@ -2,7 +2,7 @@
 
 ## Necessary Information
 
-We will be building a front-end to manage the new database of item requests. Some tailwind presets have already been defined but feel free to restructure or add whatever is necessary.
+We will be building a front-end at `/admin` to manage the new database of item requests. Some tailwind presets have already been defined but feel free to restructure or add whatever is necessary.
 
 If you are only doing the front-end portion, we have built a mock backend API for you to interface with. Note that because it is based on a mock database, some of the actions may not persist for longer than a minute or two. If you would like to test more concretely, edit `src/api/mock/data.ts` and the data will then persist.
 
@@ -20,7 +20,7 @@ We have specified some tasks as making components but that does not mean these a
 
 2. Build the needed table component in `src/components/tables`. You do not need to worry about pagination or status tabs for now.
 
-### Interacting with Backend
+### API Interactivity
 
 3. Create the base item requests page. Data can be fetched using the API endpoint `GET api/mock/request`. Again, do not worry about pagination or status tabs. Some data may also not have a last edited date as it is optional- if this is the case, merely display the created date in that column.
 
@@ -35,7 +35,7 @@ We have specified some tasks as making components but that does not mean these a
 
 ## Main Requirements
 
-5. Add pagination to the table. The backend paginates using `GET api/mock/request?page=__`. There is a pagination component already created in `src/components/molecules/Pagination.tsx` that you can use. You have to place it appropriately and make it appropriately interactive.
+5. Add pagination to the table. The backend paginates using `GET api/mock/request?page=__`. There is a pagination component already created in `src/components/molecules/Pagination.tsx` that you can use. Place it appropriately and make it functional.
 
 6. Add the tab functionality and appropriate interactions. You can get paginated item requests with a particular status using `GET api/mock/request?status=____&page=____`.
 

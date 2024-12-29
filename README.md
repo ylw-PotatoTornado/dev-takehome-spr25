@@ -12,13 +12,13 @@ Files and folders with a `mock` designation are for the mock-backend used in the
 
 Before submission, make sure you run eslint using `npm run lint` and you get no warnings or errors. If for any reason you have to disable a rule in a file, leave a comment in the file explaining why.
 
-Additionally, please write down how much of the assessment you completed in `notes.md`. Also, if you have any notes/comments [eg. feedback about the assessment, if you didn't have enough time due to personal reasons etc.], please leave them in there.
+Additionally, please complete the checklist in `notes.md`. Also, if you have any notes/comments [eg. feedback about the assessment, if you didn't have enough time due to personal reasons etc.], please leave them in there.
 
-To submit, share the link to your repository in your application. If you are a backend developer, make sure your repository includes any environment/database variables used! We will want to test it locally.
+To submit, share the link to your repository in your application. If you are a backend developer, make sure your repository includes any environment/database variables used! We will want to test submissions locally.
 
 ## Scenario ❤️
 
-_Crisis Corner_ is a non-profit that handles requests for items in areas that are affected by natural disasters. Their current Admin Portal currently only has a form where you manually type in items to approve them. You are part of a team working with them to build a better Admin Portal where they can manage received item requests in a more nuanced fashion.
+_Crisis Corner_ is a non-profit that handles requests for items in areas that are affected by natural disasters. Their current Admin Portal currently only has a form where admins manually type in items to approve them. You are part of a team working with them to build a better Admin Portal where they can manage received item requests in a more nuanced fashion.
 
 ## Stack 💻
 
@@ -44,11 +44,11 @@ You can start editing the code now! The project uses the [Next.js App Router](ht
 
 Now that you have the repository and the application set up locally, you are ready for the first task! This is for everyone regardless of whether you are a front-end/back-end/full-stack developer. We want to get to know you better!
 
-Go to [http://localhost:3000/cool](http://localhost:3000/cool) or press the "Something cool!" button in the homepage. This is a space for you to write something unique or interesting about you- it can be anything - don't sweat it! Just edit the `src/app/cool/page.tsx` file.
+Go to [http://localhost:3000/cool](http://localhost:3000/cool) or press the "Something cool!" button in the homepage. This is a space for you to put something unique or interesting about you- it can be anything - don't sweat it! Just edit the `src/app/cool/page.tsx` file.
 
 ## Onwards 🐔
 
-All your remaining tasks are based on whether you are a front-end/back-end developer. Navigate yourself to either `FRONTEND.md` or `BACKEND.md` for instructions. If you are a full-stack developer, you can do any amount of tasks from both in any order but we recommend you do the back-end portion first.
+All your remaining tasks are based on whether you are a front-end/back-end developer. Navigate yourself to either `FRONTEND.md` or `BACKEND.md` for instructions. If you are a full-stack developer, we recommend you do the back-end portion first.
 
 ### Breakdown of Task Sections
 
