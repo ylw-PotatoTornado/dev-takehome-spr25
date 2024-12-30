@@ -20,7 +20,7 @@ The API endpoints are not guaranteed to produce successful responses so make sur
 
 1. Build the Dropdown component in `src/components/atoms`. Use your discretion as to what props to give it. The existing components can serve as a helpful reference to decide how to structure the component.
 
-2. Build the needed table component in `src/components/tables`. You do not need to worry about pagination or status tabs for now.
+2. Build the needed table component in `src/components/tables`. You do not need to worry about pagination or status tabs for now. However, make sure it is responsive for mobile!
 
 ### API Interactivity
 
