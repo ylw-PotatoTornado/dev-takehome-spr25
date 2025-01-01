@@ -1,6 +1,6 @@
 # Hello 👋
 
-Thank you for your interest in Bits of Good! This assessment is designed to showcase your practical skills as a developer. The tasks included reflect the skills most often used by developers at BoG. This README has a lot of information so make sure you read it fully. While doing the assessment, if you have questions or find any part unclear, please file a GitHub issue and add `@uma-anand`as an assignee. 
+Thank you for your interest in Bits of Good! This assessment is designed to showcase your practical skills as a developer. The tasks included reflect the skills most often used by developers at BoG. This README has a lot of information so make sure you read it fully. While doing the assessment, if you have questions or find any part unclear, please file a GitHub issue and add `@uma-anand`as an assignee.
 
 The assessment has front-end and back-end portions, which can be completed independently or together if you are a full-stack developer. **You are not expected to complete everything.** Focus on code quality over quantity to demonstrate _how you write and organize code_.
 
@@ -14,7 +14,7 @@ Before submission, run eslint using `npm run lint` and ensure there are no warni
 
 Make sure to complete the checklist in `notes.md`. Additionally, this is a place to leave any notes/comments [eg. feedback about the assessment, if you didn't have enough time due to personal reasons etc.].
 
-To submit, share the link to your repository in your application. If you are a backend developer, make sure your repository includes any environment/database variables used! We will want to test submissions locally.
+To submit, share the link to your repository in your application. If you have used any env variables, make sure you copy and paste your .env file into the application! We will want to test submissions locally and it is better not to publicly commit env variables.
 
 ## Scenario ❤️
 
@@ -38,7 +38,7 @@ If you are using yarn or another package manager, run the equivalent commands.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the already implemented landing page.
 
-You can start editing the code now! 
+You can start editing the code now!
 
 ## First Task 🐥
 
