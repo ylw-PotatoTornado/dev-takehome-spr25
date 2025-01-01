@@ -22,7 +22,7 @@ _Crisis Corner_ is a non-profit that handles requests for items in areas that ar
 
 ## Stack 💻
 
-This project has been bootstrapped using Next.js, React, and Tailwind. The programming language used is TypeScript. We expect developers to use the same technologies. However, thre is no limit on libraries- feel free to import any helpful libraries. For backend developers, while implementing the database, we expect you to use MongoDB. These requirements are there to mimic the stack most often used by Bits of Good. [We also recommend you use a code formatter like Prettier, but it is not a mandatory requirement for this take-home.]
+The project uses the [Next.js App Router](https://nextjs.org/docs/app) with a [`src` folder](https://nextjs.org/docs/app/building-your-application/configuring/src-directory). Please make sure to follow the app router layout- most Google results refer to the page router. This project has been bootstrapped using Next.js, React, and Tailwind. The programming language used is TypeScript. We expect developers to use the same technologies. However, thre is no limit on libraries- feel free to import any helpful libraries. For backend developers, while implementing the database, we expect you to use MongoDB. These requirements are there to mimic the stack most often used by Bits of Good. [We also recommend you use a code formatter like Prettier, but it is not a mandatory requirement for this take-home.]
 
 ## Getting Started 🐣
 
@@ -38,7 +38,7 @@ If you are using yarn or another package manager, run the equivalent commands.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the already implemented landing page.
 
-You can start editing the code now! The project uses the [Next.js App Router](https://nextjs.org/docs/app) with a [`src` folder](https://nextjs.org/docs/app/building-your-application/configuring/src-directory).
+You can start editing the code now! 
 
 ## First Task 🐥
 
