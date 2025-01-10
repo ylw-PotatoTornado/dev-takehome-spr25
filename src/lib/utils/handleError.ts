@@ -2,7 +2,7 @@ import { ServerResponseBuilder } from "../builders/serverResponseBuilder";
 import { InputException } from "../errors/inputExceptions";
 import { ResponseType } from "../types/apiResponse";
 
-export const handleError = (e: any) => {
+export function handleError(e: any): Response {
     if (e instanceof InputException) {
         return new ServerResponseBuilder(ResponseType.INVALID_INPUT).build();
       }

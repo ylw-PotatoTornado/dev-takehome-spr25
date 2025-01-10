@@ -7,6 +7,7 @@ import {
 
 import { handleError } from "@/lib/utils/handleError";
 
+
 /** Modification based on @app/api/mock/requests/route.ts, mainly on
  * 
  *  1- modify: Create util function handleError(e), replacing if-else statement 
@@ -26,7 +27,7 @@ export async function GET(request: Request) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (e) {
-    handleError(e);
+    return handleError(e);
   }
 }
 
@@ -39,7 +40,7 @@ export async function PUT(request: Request) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (e) {
-    handleError(e);
+    return handleError(e);
   }
 }
 
@@ -66,7 +67,7 @@ export async function PATCH(request: Request) {
     }
 
   } catch (e) {
-    handleError(e);
+    return handleError(e);
   }
 }
 
@@ -93,6 +94,6 @@ export async function DELETE(request: Request) {
     }
 
   } catch (e) {
-    handleError(e);
+    return handleError(e);
   }
 }
