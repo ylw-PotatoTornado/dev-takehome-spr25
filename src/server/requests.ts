@@ -1,5 +1,5 @@
-import { connectDB } from "@/server/db/config.js";
-import Request from "@/server/db/models/request";
+import { connectDB } from "./db/config.ts";
+import Request from "./db/models/request";
 
 import { RequestStatus, ItemRequest, EditStatusRequest } from "@/lib/types/request";
 import { PAGINATION_PAGE_SIZE } from "@/lib/constants/config";
