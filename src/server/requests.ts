@@ -20,6 +20,9 @@ import { BatchError, BatchStatus, EditedContent, DeletedContent, BatchResult } f
  *  1- modify: All function - enable async functions & change return type = Promise<T> 
  *  2- modify: All function - validation before DB connection
  *  3- modify: getItemRequests - filter before sorting to improve query performance
+ *  4- modify: function editStatusRequest() => batch edit enabled, return type BatchResult<EditStatusRequest>
+ *  5- new   : function deleteRequest() => batch delete
+ * 
  */
 
 
@@ -114,7 +117,7 @@ export async function createNewRequest(request: any): Promise<ItemRequest> {
     // Loop thourgh requests in {id , status} format 
     for (const request of editRequests) {
 
-      /** Validate request input, if failed, update failed result object*/
+      // Validate request input, if failed, update failed result object
       const validatedRequest = validateEditStatusRequest(request);
       if (!validatedRequest) {
         failedCount += 1;
