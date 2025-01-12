@@ -1,4 +1,4 @@
-import { connectDB } from "./db/config.ts";
+import { connectDB } from "./db/config";
 import Request from "./db/models/request";
 
 import { RequestStatus, ItemRequest, EditStatusRequest } from "@/lib/types/request";
@@ -136,8 +136,12 @@ export async function createNewRequest(request: any): Promise<ItemRequest> {
       // Modify found record and update success result object 
       editedItemRequest.status = validatedRequest.status;
       editedItemRequest.lastEditedDate = new Date();
+      const savedRequest = await editedItemRequest.save();
       succeedCount += 1;
-      succeedRequests.body.push(request);
+      succeedRequests.body.push({
+        id: savedRequest.id,
+        status: savedRequest.status
+      });
 
     }
 
