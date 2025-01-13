@@ -28,11 +28,11 @@ export default function ItemRequestsPage() {
 
   const [pageNumber, setPageNumber] = useState(1);
   const [totalRecords, setTotalRecords] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
+  // const [totalPages, setTotalPages] = useState(0);
 
   /** handlers */ 
   const handleDropdownChange = async (
-    requestId: number, newStatus: any
+    requestId: number, newStatus: RequestStatus
   ) => {
     try {
       const localUpdateStatusRequests: EditStatusRequest[] = updateRowStatus(updateStatusRequests, requestId, newStatus);
@@ -65,7 +65,15 @@ export default function ItemRequestsPage() {
       );
 
       
-      const initialPaginatedRequests = fetchedItemRequests.data.map((request) => ({
+      const initialPaginatedRequests = fetchedItemRequests.data.map((request: 
+        {
+          id: number,
+          requestorName: string,
+          itemRequested: string,
+          requestCreatedDate: Date,
+          lastEditedDate: Date,
+          status: RequestStatus
+        } ) => ({
         id: request.id,
         requestorName: request.requestorName,
         itemRequested: request.itemRequested,
@@ -74,13 +82,13 @@ export default function ItemRequestsPage() {
         status: request.status,
       }));
 
-      const initialRowStatus = fetchedItemRequests.data.map((request) => ({
+      const initialRowStatus = fetchedItemRequests.data.map((request: EditStatusRequest) => ({
         id: request.id,
         status: request.status,
       }));
       setRowStatus(initialRowStatus);
       setPaginatedRequests(initialPaginatedRequests);
-      setTotalPages(fetchedItemRequests.totalPages);
+      // setTotalPages(fetchedItemRequests.totalPages);
       setTotalRecords(fetchedItemRequests.totalRecords);
 
     } catch (error) {

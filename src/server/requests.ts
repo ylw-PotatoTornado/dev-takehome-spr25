@@ -40,10 +40,10 @@ export async function getItemRequests(
 
         await connectDB();
 
-        const query: any = {};
-        if (status && isValidStatus(status)) {
-            query.status = status;
-        }
+  const query: {status?: string} = {};
+  if (status && isValidStatus(status)) {
+    query.status = status;
+  }
 
   // Filter before sorting to improve performance;
   const filteredRequests = await Request.find(query);

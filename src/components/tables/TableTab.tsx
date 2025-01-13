@@ -6,9 +6,9 @@ export type TabOption = {
 }
 
 interface TabProps {
-    options: TabOption[],
-    selected: RequestStatus | null,
-    onChange: (value: any) => void;
+  options: TabOption[];
+  selected: RequestStatus | null;
+  onChange: (value: RequestStatus | null) => void;
 }
 
 export function TableTab({ options, selected, onChange }: TabProps) {

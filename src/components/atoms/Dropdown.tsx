@@ -15,7 +15,7 @@ export type DropdownOption = {
 export interface DropdownProps {
   options: DropdownOption[];
   selected: RequestStatus;
-  onChange: (value: any) => void;
+  onChange: (value: RequestStatus) => void;
 }
 
 export default function Dropdown({
