@@ -17,7 +17,7 @@ export default function Kewl() {
           Independent game enthusiasist. Adventure, Suspense, Detective games in specific. <br/><br/>
 
           <ul className="px-4">
-            <li>- Disco Elysium: can't love it more</li>
+            <li>- Disco Elysium: can&apos;t love it more</li>
             <li>- Unheard: Innovative, strongly recommend</li>
             <li>- Cyber Manhub: Not bad, I prefer Cyber Manhub - 1</li>
             <li>- What Remains of Edith Finch: A great visual novel</li>
