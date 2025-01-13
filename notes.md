@@ -17,14 +17,14 @@
     - [X] Batch edits
     - [X] Batch deletes
 - [ ] Front-end
-  - [ ] Minimum Requirements
-    - [ ] Dropdown component
-    - [ ] Table component
-    - [ ] Base page [table with data]
-    - [ ] Table dropdown interactivity
-  - [ ] Main Requirements
-    - [ ] Pagination
-    - [ ] Tabs
+  - [X] Minimum Requirements
+    - [X] Dropdown component
+    - [X] Table component
+    - [X] Base page [table with data]
+    - [X] Table dropdown interactivity
+  - [X] Main Requirements
+    - [X] Pagination
+    - [X] Tabs
   - [ ] Above and Beyond
     - [ ] Batch edits
     - [ ] Batch deletes
@@ -94,3 +94,44 @@ NOTE: check part 5. for extra notes on batch edit/delete design
       - <u>*Lower implementation & storage cost*</u>: Easier, faster to implement. No extra space required for storing soft deleted records.
 
 
+## Frontend Implementation:  
+
+
+### 1. Components
+  The Admin main page is composed of reuseable components in following hierachy. Bold prints are created components.
+  - **TableHeader** 
+  - **TableTab**
+  - Major Table Contents
+      -  **TableRowHeader**
+      -  TableRows
+          - data
+          - data
+          - data
+          - data
+          - **Dropdown**
+            - **Dropdown Badge**
+      -  **Pagination**(provided by Bits Of Good)
+          
+  Both **TableTab and Pagination** components were implemented with **functionality** to trigger get requests by:
+
+  - Combined **state variable: filter** = {tabStatus, page}
+  - **Auto re-fetch** items via UseEffect() 
+
+### 2. API Interactivity
+  - **GET request** 
+    
+    Triggered via the useEffect() as described above in 1.Components
+  - **PATCH request**
+    
+    Despite implemented backend batch edit requests, frontend batch edit feature was not implemented due to time constraint. However, I still defined a handler that can turn selected items into body format accepted by the backend (batch format), increasing the scalability and flexibility for future developement.
+
+
+### 3. State Management
+  useState hooks were used in the frontend, together with useEffect, to reduce manual works and streamline the process of updating contents.
+
+  Major state variables implemented in the frontend are:
+  - **paginatedRequests**: storing major table data returned by GET request, e.g. requestorName, itemRequested, etc.
+  - **rowStatus**: storing request.status only, managed separately to be: used in Dropdown component & avoid updating whole paginatedRequests state when only updting a specific entry status. 
+  - **updateStatueRequests**: storing requests to be updated. For implementing furhter batch edit request, this one will come in handy.
+  - **totalRecords**: storing total record information to be used in Pagination component
+  - **filter**: described above in 1. Components
