@@ -3,7 +3,7 @@
 <!-- Make sure you fill out this checklist with what you've done before submitting! -->
 
 - [X] Read the README [please please please]
-- [ ] Something cool!
+- [X] Something cool!
 - [X] Back-end
   - [X] Minimum Requirements
     - [X] Setup MongoDB database
@@ -52,12 +52,14 @@ NOTE: check part 5. for extra notes on batch edit/delete design
   - **modify**: Response return status - PATCH (edits) - if all success, code = success, otherwise (partial fail / all fail), code = fail
   - **new**: Route for DELETE request - DELETE - same logic to batch edit 
 
+### 4. Middlewares
+  - **new**: Create middleware.ts => pre-warm db connection to avoid request error
 
-### 4. Test  
+### 5. Test  
   The backend portion was tested using **Postman** to ensure routes and corresponding methods (GET /PUT /PATH /DELETE) are working as expected (success /error handling)
 
 
-### 5. Extra Note: Batch Edit/Delete Implementation
+### 6. Extra Note: Batch Edit/Delete Implementation
   - **Batch Edit**: 
   
     Body Format Expected: an array wrapper by "updates"  
