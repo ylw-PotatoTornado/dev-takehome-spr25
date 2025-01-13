@@ -27,13 +27,12 @@ import { BatchError, BatchStatus, EditedContent, DeletedContent, BatchResult } f
 
 
 export async function getItemRequests(
-    status: string | null,
-    page: number
-): Promise<ItemRequest[]> {
-
-        if (status && !isValidStatus(status)) {
-            throw new InvalidInputError("status value");
-        }
+  status: string | null,
+  page: number,
+): Promise<{ data: ItemRequest[]; totalPages: number; totalRecords: number }> {
+  if (status && !isValidStatus(status)) {
+    throw new InvalidInputError("status value");
+  }
 
         if (page < 1 || PAGINATION_PAGE_SIZE < 1) {
             throw new InvalidPaginationError(page, PAGINATION_PAGE_SIZE);
@@ -46,14 +45,14 @@ export async function getItemRequests(
             query.status = status;
         }
 
-        // Filter before sorting to improve performance;
-        const filteredRequests = await Request.find(query);
-        const sortedRequests = sortItemRequests(filteredRequests);
-        const paginatedRequests = paginate(
-            sortedRequests, 
-            page, 
-            PAGINATION_PAGE_SIZE
-            ).data;
+  // Filter before sorting to improve performance;
+  const filteredRequests = await Request.find(query);
+  const sortedRequests = sortItemRequests(filteredRequests);
+  const paginatedRequests = paginate(
+    sortedRequests,
+    page,
+    PAGINATION_PAGE_SIZE,
+  );
 
         return paginatedRequests;
 
