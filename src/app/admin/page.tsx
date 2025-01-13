@@ -35,6 +35,13 @@ export default function ItemRequestsPage() {
   const [pageNumber, setPageNumber] = useState(1);
   const [totalRecords, setTotalRecords] = useState(0);
 
+  const [filter, setFilter] = useState<{
+    status: RequestStatus | null, page : number
+  }>({
+    status: null,
+    page: 1
+  })
+
 
   /** handlers */
   const handleDropdownChange = async (
@@ -68,14 +75,87 @@ export default function ItemRequestsPage() {
     }
   };
 
+  // const handleTabOrPageChange = async (
+  //   selectedTabStatus: string | null,
+  //   pageNumber: string,
+  // ) => {
+  //   try {
+  //     const fetchedItemRequests = await getItemRequests(
+  //       selectedTabStatus,
+  //       pageNumber.toString(),
+  //     );
+
+  //     const initialPaginatedRequests = fetchedItemRequests.data.map(
+  //       (request: {
+  //         id: number;
+  //         requestorName: string;
+  //         itemRequested: string;
+  //         requestCreatedDate: Date;
+  //         lastEditedDate: Date;
+  //         status: RequestStatus;
+  //       }) => ({
+  //         id: request.id,
+  //         requestorName: request.requestorName,
+  //         itemRequested: request.itemRequested,
+  //         requestCreatedDate: new Date(request.requestCreatedDate),
+  //         lastEditedDate: new Date(request.lastEditedDate),
+  //         status: request.status,
+  //       }),
+  //     );
+
+  //     const initialRowStatus = fetchedItemRequests.data.map(
+  //       (request: EditStatusRequest) => ({
+  //         id: request.id,
+  //         status: request.status,
+  //       }),
+  //     );
+  //     setRowStatus(initialRowStatus);
+  //     setPaginatedRequests(initialPaginatedRequests);
+  //     setTotalRecords(fetchedItemRequests.totalRecords);
+  //   } catch (error) {
+  //     console.error("Failed to fetch item requests:", error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   handleTabOrPageChange(selectedTabStatus, pageNumber.toString());
+  // }, [selectedTabStatus, pageNumber]);
+
+
+  const handleTabChange = (newStatus: RequestStatus | null) => {
+    setFilter((prevFilter) => {
+      if (prevFilter.status === newStatus) {
+        return prevFilter;
+      }
+
+      return {
+        status: newStatus,
+        page: 1
+      }
+    })
+  };
+
+
+  const handlePageChange = (newPage: number) => {
+
+    setFilter((prevFilter) => {
+      return {
+        status: prevFilter.status,
+        page: newPage
+      }
+    })
+  };
+
+
+
   const handleTabOrPageChange = async (
-    selectedTabStatus: string | null,
-    pageNumber: string,
+    status: string | null,
+    page: number,
   ) => {
     try {
       const fetchedItemRequests = await getItemRequests(
-        selectedTabStatus,
-        pageNumber.toString(),
+        status,
+        page.toString(),
       );
 
       const initialPaginatedRequests = fetchedItemRequests.data.map(
@@ -111,21 +191,29 @@ export default function ItemRequestsPage() {
   };
 
   useEffect(() => {
-    handleTabOrPageChange(selectedTabStatus, pageNumber.toString());
-  }, [selectedTabStatus, pageNumber]);
+    handleTabOrPageChange(filter.status, filter.page);
+  }, [filter]);
+
 
   return (
     <div className="flex justify-center items-center h-screen overflow-x-auto">
       <div className="w-full max-w-[1205px] rounded-[8px] border-[1px] border-[#EAECF0]">
         <TableHeader text={tableHeader} />
 
-        <TableTab
+        {/* <TableTab
           options={tabOptions}
           selected={selectedTabStatus}
           onChange={(newSelectedTabStatus) =>
             setSelectedTabStatus(newSelectedTabStatus)
           }
-        />
+        /> */}
+        <TableTab
+          options={tabOptions}
+          selected={filter.status}
+          onChange={(newSelectedTabStatus) =>
+            handleTabChange(newSelectedTabStatus)
+          }
+        />        
 
         <table className="w-full max-w-[1205px] border-collapse">
           <thead>
@@ -179,12 +267,18 @@ export default function ItemRequestsPage() {
                 <div className="flex items-center justify-between p-4">
                   <div className="rectangle"></div>
                   <div className="pagination">
-                    <Pagination
+                    {/* <Pagination
                       pageNumber={pageNumber}
                       pageSize={PAGINATION_PAGE_SIZE}
                       totalRecords={totalRecords}
                       onPageChange={(newPage) => setPageNumber(newPage)}
-                    />
+                    /> */}
+                    <Pagination
+                      pageNumber={filter.page}
+                      pageSize={PAGINATION_PAGE_SIZE}
+                      totalRecords={totalRecords}
+                      onPageChange={(newPage) => handlePageChange(newPage)}
+                    />                    
                   </div>
                 </div>
               </td>
