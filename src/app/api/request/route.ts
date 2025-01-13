@@ -7,13 +7,12 @@ import {
 
 import { handleError } from "@/lib/utils/handleError";
 
-
 /** Modification based on @app/api/mock/requests/route.ts, mainly on
- * 
- *  1- modify: Create util function handleError(e), replacing if-else statement 
+ *
+ *  1- modify: Create util function handleError(e), replacing if-else statement
  *  2- modify: Response return status - PATCH (edits) - if all success, code = success, otherwise (partial fail / all fail), code = fail
- *  3- new   : Route for DELETE request - DELETE - same logic to batch edit 
- * 
+ *  3- new   : Route for DELETE request - DELETE - same logic to batch edit
+ *
  */
 
 export async function GET(request: Request) {
@@ -44,19 +43,18 @@ export async function PUT(request: Request) {
   }
 }
 
-
 export async function PATCH(request: Request) {
   try {
     const req = await request.json();
     const editedRequest = await editStatusRequest(req);
 
-    // All succeed, return success status code 
-    if (editedRequest.failedCount == 0 ) {
+    // All succeed, return success status code
+    if (editedRequest.failedCount == 0) {
       return new Response(JSON.stringify(editedRequest), {
         status: 200,
         headers: { "Content-Type": "application/json" },
       });
-    } 
+    }
 
     // Otherwise (all failed / partial failed), return failed status code, with reuslt for debugging
     else {
@@ -65,25 +63,23 @@ export async function PATCH(request: Request) {
         headers: { "Content-Type": "application/json" },
       });
     }
-
   } catch (e) {
     return handleError(e);
   }
 }
-
 
 export async function DELETE(request: Request) {
   try {
     const req = await request.json();
     const deletedRequest = await deleteRequest(req);
 
-    // All succeed, return success status code 
-    if (deletedRequest.failedCount == 0 ) {
+    // All succeed, return success status code
+    if (deletedRequest.failedCount == 0) {
       return new Response(JSON.stringify(deletedRequest), {
         status: 200,
         headers: { "Content-Type": "application/json" },
       });
-    } 
+    }
 
     // Otherwise (all failed / partial failed), return failed status code, with reuslt for debugging
     else {
@@ -92,7 +88,6 @@ export async function DELETE(request: Request) {
         headers: { "Content-Type": "application/json" },
       });
     }
-
   } catch (e) {
     return handleError(e);
   }

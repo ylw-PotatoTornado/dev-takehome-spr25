@@ -26,7 +26,7 @@ export default function Pagination({
   const firstRecordOnPage = (pageNumber - 1) * pageSize + 1;
   const lastRecordOnPage = Math.min(
     firstRecordOnPage + pageSize - 1,
-    totalRecords
+    totalRecords,
   );
 
   const isValidPage =

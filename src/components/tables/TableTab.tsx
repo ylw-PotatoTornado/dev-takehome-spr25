@@ -1,9 +1,9 @@
 import { RequestStatus } from "@/lib/types/request";
 
 export type TabOption = {
-    label: string,
-    value: RequestStatus | null,
-}
+  label: string;
+  value: RequestStatus | null;
+};
 
 interface TabProps {
   options: TabOption[];
@@ -12,12 +12,11 @@ interface TabProps {
 }
 
 export function TableTab({ options, selected, onChange }: TabProps) {
-  
   const handleChange = (value: RequestStatus | null) => {
     if (value !== selected) {
-      onChange(value)
+      onChange(value);
     }
-  }
+  };
 
   return (
     <div className="top-[67px] w-full max-w-[1205px] h-[42px] flex flex-wrap gap-[6px] border-b border-[#EAECF0] ">

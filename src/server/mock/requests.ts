@@ -21,7 +21,7 @@ import {
 
 export function getMockItemRequests(
   status: string | null,
-  page: number
+  page: number,
 ): MockItemRequest[] {
   const sortedRequests = sortMockItemRequests(mockItemRequests);
   let filteredRequests = sortedRequests;
@@ -31,7 +31,7 @@ export function getMockItemRequests(
   const paginatedRequests = paginate(
     filteredRequests,
     page,
-    PAGINATION_PAGE_SIZE
+    PAGINATION_PAGE_SIZE,
   ).data;
   return paginatedRequests;
 }
@@ -60,7 +60,7 @@ export function editMockStatusRequest(request: any): MockEditStatusRequest {
     throw new InvalidInputError("edit item request");
   }
   const editedItemRequest = mockItemRequests.find(
-    (req) => req.id === validatedRequest.id
+    (req) => req.id === validatedRequest.id,
   );
   if (!editedItemRequest) {
     throw new InvalidInputError("edit item ID");

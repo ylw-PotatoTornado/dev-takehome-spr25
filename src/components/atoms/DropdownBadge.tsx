@@ -1,8 +1,8 @@
 interface BadgeProps {
-  text: string; 
-  backgroundColor: string; 
-  textColor: string; 
-  dotColor: string; 
+  text: string;
+  backgroundColor: string;
+  textColor: string;
+  dotColor: string;
 }
 
 export const Badge: React.FC<BadgeProps> = ({
@@ -15,14 +15,14 @@ export const Badge: React.FC<BadgeProps> = ({
     <div
       className="inline-flex items-center px-3 py-1 rounded-full"
       style={{
-        backgroundColor: backgroundColor, 
+        backgroundColor: backgroundColor,
       }}
     >
       {/* Dot */}
       <div
         className="w-2 h-2 rounded-full mr-2"
         style={{
-          backgroundColor: dotColor, 
+          backgroundColor: dotColor,
         }}
       ></div>
 
@@ -30,7 +30,7 @@ export const Badge: React.FC<BadgeProps> = ({
       <span
         className="text-sm font-medium"
         style={{
-          color: textColor, 
+          color: textColor,
         }}
       >
         {text}

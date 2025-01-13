@@ -7,9 +7,9 @@ export function generateMockId(requests: MockItemRequest[]): number {
 }
 
 export function sortMockItemRequests(
-  requests: MockItemRequest[]
+  requests: MockItemRequest[],
 ): MockItemRequest[] {
   return requests.sort(
-    (a, b) => b.requestCreatedDate.getTime() - a.requestCreatedDate.getTime()
+    (a, b) => b.requestCreatedDate.getTime() - a.requestCreatedDate.getTime(),
   );
 }

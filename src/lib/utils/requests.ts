@@ -6,10 +6,8 @@ export function generateId(requests: ItemRequest[]): number {
     : 1;
 }
 
-export function sortItemRequests(
-  requests: ItemRequest[]
-): ItemRequest[] {
+export function sortItemRequests(requests: ItemRequest[]): ItemRequest[] {
   return requests.sort(
-    (a, b) => b.requestCreatedDate.getTime() - a.requestCreatedDate.getTime()
+    (a, b) => b.requestCreatedDate.getTime() - a.requestCreatedDate.getTime(),
   );
 }

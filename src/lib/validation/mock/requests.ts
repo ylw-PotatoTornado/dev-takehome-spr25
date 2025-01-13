@@ -36,7 +36,7 @@ export function isValidMockId(id: any): boolean {
 }
 
 export function validateMockCreateItemRequest(
-  request: any
+  request: any,
 ): MockCreateItemRequest | null {
   if (!request.requestorName || !request.itemRequested) {
     return null;
@@ -55,7 +55,7 @@ export function validateMockCreateItemRequest(
 }
 
 export function validateMockEditStatusRequest(
-  request: any
+  request: any,
 ): MockEditStatusRequest | null {
   if (!request.id || !request.status) {
     return null;
