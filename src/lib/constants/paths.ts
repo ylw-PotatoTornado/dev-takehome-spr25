@@ -3,9 +3,9 @@ export const APP_PATHS = {
   COOL: "/cool",
   ADMIN_PORTAL: "/admin",
   MOCK_API_PREFIX: "/api/mock",
-  REAL_API_PREFIX: "/api/",
+  REAL_API_PREFIX: "/api",
 };
 
 export const API_PATHS = {
-  REQUESTS: "/requests",
+  REQUESTS: "/request",
 };
