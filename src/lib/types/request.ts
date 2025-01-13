@@ -5,6 +5,14 @@ export enum RequestStatus {
   REJECTED = "rejected",
 }
 
+export const RequestStatusLabel =  {
+  [RequestStatus.PENDING]: "Pending",
+  [RequestStatus.APPROVED]: "Approved",
+  [RequestStatus.COMPLETED]: "Completed",
+  [RequestStatus.REJECTED]: "Rejected",
+}
+
+
 // Declare major request type involved in CRUD operation
 export interface ItemRequest {
   id: number;
